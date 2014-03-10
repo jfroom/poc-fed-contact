@@ -1,0 +1,23 @@
+{
+  "name": "poc-fed-contact",
+  "version": "0.1.0",
+  "directory": "app/components",
+  "dependencies": {
+    "jquery": "~1.9.1",
+    "requirejs": "*",
+    "raphael": "~2.1.1",
+    "modernizr": "~2.6.2",
+    "bootstrap": "~2.3.2",
+    "requirejs-text": "~2.0.5",
+    "requirejs-domready": "~2.0.1"
+  },
+  "devDependencies": {
+    "chai": "~1.7.2",
+    "chai-backbone": "latest",
+    "chai-jquery": "~1.1.1",
+    "sinon-chai": "~2.4.0",
+    "mocha": "~1.12.0",
+    "bootstrap-sass": "~3.0.2",
+    "marionette": "~1.6.4"
+  }
+}
