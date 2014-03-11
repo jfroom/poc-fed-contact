@@ -18,6 +18,8 @@
     "sinon-chai": "~2.4.0",
     "mocha": "~1.12.0",
     "bootstrap-sass": "~3.0.2",
-    "marionette": "~1.6.4"
+    "marionette": "~1.6.4",
+    "font-awesome": "~4.0.3",
+    "solarized": "~0.1.2"
   }
 }
