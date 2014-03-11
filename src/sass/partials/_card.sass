@@ -1,0 +1,93 @@
+section[role="card"]
+  @include make-sm-column(9)
+
+  form[role="form"]
+    @include make-row()
+    margin: 0
+    padding: 0
+
+    label
+      @extend .control-label
+      display: block
+
+    .card__in
+      @extend .form-control
+
+    .card__in--full
+      width: 100%
+
+    .card__name
+      @include make-sm-column(12)
+      @extend .form-group
+      .card__in--name
+        @extend .input-lg
+        font-weight: bold
+
+    .card__pic
+      @include make-sm-column(3)
+      @extend .form-group
+      .card__pic--img-wrap, .card__pic--fpo
+        //width: 106px
+        //height: 106px
+        //padding: 2px
+        //border: 1px solid $gray-light
+        display: inline-block
+        text-align: center
+        .card__pic--img
+          @extend .img-thumbnail
+      &.fpo
+        .card__pic--img-wrap
+          display: none
+        .card__pic--fpo
+          @extend .img-thumbnail
+          width: 100px
+          height: 100px
+      &.pic
+        .card__pic--fpo
+          display: none
+
+
+      .user-fpo
+        color: $gray-light
+        padding-top: 10px
+
+      .card__in--pic
+        margin-top: $grid-gutter-width/4
+    .card__in--sex, .card__in--dob, .card__in--state
+      @extend .form-control
+      display: inline-block
+      width: auto
+    .card__in--city, .card__in--zip
+      display: inline-block
+      width: auto
+    .card__group--right
+      @include make-sm-column(9)
+
+    .card__sab
+      display:block
+      //float:left
+      margin-bottom: $grid-gutter-width/2
+      .card__sex, .card__dob, .card__age
+        display: inline-block
+        margin-right: $grid-gutter-width/2
+
+    .card__in--city
+      width: 120px
+    .card__phone, .card__email
+      display: inline-block
+
+    .card__save
+      @extend .btn
+      @extend .btn-success
+      @extend .btn-lg
+      //width: 100%
+    .card__random
+      @extend .btn
+      @extend .btn-info
+      @extend .btn-lg
+
+  .card__group--btn
+    @include make-sm-column(12)
+    margin-top: $grid-gutter-width/2
+    text-align: right
+

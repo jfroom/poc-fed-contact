@@ -1,0 +1,57 @@
+nav[role="contacts"]
+  @include make-sm-column(3)
+  border-radius: 6px
+  padding-top: $grid-gutter-width/2
+  padding-bottom: $grid-gutter-width/2
+  background-color: $gray-lighter
+
+  .loading
+    width: 100%
+    text-align: center
+    padding: $grid-gutter-width
+  .contacts__add--btn
+    @extend .btn
+    @extend .btn-success
+    @extend .btn-lg
+    width: 100%
+  ul.contact-list
+    padding-left: 0
+    li
+      list-style: none
+      margin-bottom: 5px
+      &:last-child
+        margin-bottom: 0
+
+  .contact-item
+    display: inline-block
+    width: 100%
+    position: relative
+    min-height: 50px
+    background-color: darken($gray-lighter, 10%)
+    padding: 10px
+    border-radius: 6px
+    @include disableUserSelect()
+    cursor: pointer
+    &:hover
+      background-color: darken($gray-lighter, 15%)
+
+    .contact-item__thumb
+      width: 34px
+      height: 34px
+      background-color: #fff
+      overflow: hidden
+      text-align: center
+      position: absolute
+      border: 1px solid $gray-light
+      border-radius: 0px
+      padding: 1px
+      .user-fpo
+        color: $gray-light
+        margin-top: 2px
+    .contact-item__thumb-img
+      width: 30px
+      height: 30px
+    .contact-item__name
+      position: relative
+      margin: 3px 3px 3px 30px + $grid-gutter-width/2
+      span
