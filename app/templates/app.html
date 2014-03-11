@@ -47,6 +47,7 @@
       </div>
       <div class="card__group--right">
         <div class="card__sab">
+          <!-- SEX -->
           <div class="card__sex">
             <label for="cfm__sex">Sex</label>
             <select id="cfm__sex" class="card__in--sex" tabindex="2">
@@ -56,6 +57,8 @@
               <option value="other">Other</option>
             </select>
           </div>
+
+          <!-- DOB -->
           <div class="card__dob">
             <label>Birthday</label>
             <select tabindex="4" class="card__in--dob mm xcard__in" id="cfm__dob--mm">
@@ -69,6 +72,8 @@
             </select>
 
           </div>
+
+          <!-- AGE -->
           <div class="card__age hide">
             <label>Age</label>
             <input id="cfm__age" type="text" placeholder="Age" tabindex="3" maxlength="3" />
@@ -79,9 +84,11 @@
         <div class="card__address">
           <label>Address</label>
           <p>
+            <!-- STREET -->
             <input id="card__street" class="card__in--street card__in card__in--full" id="cfm__street" type="text" placeholder="123 Main Street" />
           </p>
           <p>
+            <!-- CITY -->
             <input type="text" placeholder="City" class="card__in--city card__in"/>
             <select class="card__in--state" id="cfm__state">
               <option value="">State</option>
@@ -89,10 +96,14 @@
             <input placeholder="Zip" class="card__in--zip card__in" id="cfm__zip" maxlength="6" type="text"/>
           </p>
         </div>
+
+        <!-- PHONE -->
         <div class="card__phone">
           <label>Phone</label>
           <input type="tel" placeholder="555-555-5555" class="card__in--phone card__in" maxlength="12" id="cfm__phone"/>
         </div>
+
+        <!-- EMAIL -->
         <div class="card__email">
           <label>Email</label>
           <input type="email" placeholder="you@email.com" maxlength="256" id="cfm__email" class="card__in--email card__in"/>
@@ -101,8 +112,9 @@
       </div>
 
       <div class="card__group--btn">
-        <button type="button" class="card__random" id="cfm__random"><i class="fa fa-lg fa-magic"></i> Random Data</button>
-        <button type="submit" class="card__save" id="cfm__save"><i class="fa fa-lg fa-save"></i> Save Contact</button>
+        <button type="button" class="card__btn--lg card__delete" id="cfm__delete"><i class="fa fa-lg fa-trash-o"></i> Delete</button>
+        <button type="button" class="card__btn--lg card__random" id="cfm__random"><i class="fa fa-lg fa-magic"></i> Random Data</button>
+        <button type="submit" class="card__btn--lg card__save" id="cfm__save"><i class="fa fa-lg fa-save"></i> Save Contact</button>
       </div>
     </form>
 

@@ -82,17 +82,16 @@ section[role="card"]
     .card__phone, .card__email
       display: inline-block
 
+    .card__btn--lg
+      @extend .btn
+      @extend .btn-lg
+      margin-bottom: $grid-gutter-width/4
     .card__save
-      @extend .btn
       @extend .btn-success
-      @extend .btn-lg
-      margin-bottom: $grid-gutter-width/4
-
     .card__random
-      @extend .btn
       @extend .btn-info
-      @extend .btn-lg
-      margin-bottom: $grid-gutter-width/4
+    .card__delete
+      @extend .btn-danger
 
   .card__group--btn
     @include make-sm-column(12)
