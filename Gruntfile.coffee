@@ -371,7 +371,7 @@ module.exports = (grunt)->
     'copy:dist'
 
     'connect:test'
-    # 'mocha'
+    'mocha'
     'requirejs:compile'
     'useminPrepare'
     'imagemin'
