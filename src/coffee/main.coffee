@@ -8,6 +8,9 @@ requirejs.config
     'backbone':
       deps: ['underscore', 'jquery']
       exports: 'Backbone'
+    'marionette':
+      exports: 'Backbone.Marionette',
+      deps: ['backbone']
 
     ###
     'bootstrap-affix':    { deps: ['jquery'], exports: '$' }
@@ -31,11 +34,15 @@ requirejs.config
   paths:
     'underscore':   '../components/underscore/underscore'
     'backbone':   '../components/backbone/backbone'
+    'marionette':   '../components/marionette/lib/backbone.marionette'
+    'localStorage':   '../components/backbone.localStorage/backbone.localStorage'
     'jquery':     '../components/jquery/jquery'
     'text' :    '../components/requirejs-text/text'
     'domReady':   '../components/requirejs-domready/domReady'
     'modernizr':  '../components/modernizr/modernizr'
     'templates':  '../templates'
+
+
 
     ###
     'bootstrap-affix':    '../components/bootstrap/js/bootstrap-affix'
@@ -54,11 +61,20 @@ requirejs.config
     ###
 
     'config':     'app/config/config_base'
+    'router':     'app/routers/index'
+    'controller': 'app/controllers/index'
+
 
 require ['app/vendors'], ->
 
-  require ['app/app', 'jquery'], (App, $) ->
-    App.initialize()
+  require ['app/app', 'backbone', 'jquery', 'router', 'controller', 'app/collections/ContactList'], (app, $, Backbone, Router, Controller, ContactList) ->
+
+
+    app.addInitializer () ->
+      app.router = new Router {controller: Controller}
+
+      app.vent.trigger "routing:started"
+    app.start()
 
     if window.is_test
       mocha_div = $('<div />', { id: 'mocha' })
