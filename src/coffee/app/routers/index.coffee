@@ -4,3 +4,4 @@ define ["marionette"], (Marionette) ->
     appRoutes:
       "add": "doAdd"
       "view/:id": "doView"
+      "*notFound": "doAdd"

@@ -11,23 +11,6 @@ requirejs.config
     'marionette':
       exports: 'Backbone.Marionette',
       deps: ['backbone']
-
-    ###
-    'bootstrap-affix':    { deps: ['jquery'], exports: '$' }
-    'bootstrap-alert':    { deps: ['jquery'], exports: '$' }
-    'bootstrap-button':   { deps: ['jquery'], exports: '$' }
-    'bootstrap-carousel':   { deps: ['jquery'], exports: '$' }
-    'bootstrap-collapse':   { deps: ['jquery'], exports: '$' }
-    'bootstrap-dropdown':   { deps: ['jquery'], exports: '$' }
-    'bootstrap-modal':    { deps: ['jquery'], exports: '$' }
-    'bootstrap-popover':  { deps: ['jquery'], exports: '$' }
-    'bootstrap-scrollspy':  { deps: ['jquery'], exports: '$' }
-    'bootstrap-tab':    { deps: ['jquery'], exports: '$' }
-    'bootstrap-tooltip':  { deps: ['jquery'], exports: '$' }
-    'bootstrap-transition': { deps: ['jquery'], exports: '$' }
-    'bootstrap-typeahead':  { deps: ['jquery'], exports: '$' }
-    ###
-
     'modernizr':
       exports: 'Modernizr'
 
@@ -42,25 +25,6 @@ requirejs.config
     'templates':  '../templates'
     'lorem':  '../components/lorem/src/library/lorem'
     'Chance':  '../components/chance/chance'
-
-
-
-    ###
-    'bootstrap-affix':    '../components/bootstrap/js/bootstrap-affix'
-    'bootstrap-alert':    '../components/bootstrap/js/bootstrap-alert'
-    'bootstrap-button':   '../components/bootstrap/js/bootstrap-button'
-    'bootstrap-carousel':   '../components/bootstrap/js/bootstrap-carousel'
-    'bootstrap-collapse':   '../components/bootstrap/js/bootstrap-collapse'
-    'bootstrap-dropdown':   '../components/bootstrap/js/bootstrap-dropdown'
-    'bootstrap-modal':    '../components/bootstrap/js/bootstrap-modal'
-    'bootstrap-popover':  '../components/bootstrap/js/bootstrap-popover'
-    'bootstrap-scrollspy':  '../components/bootstrap/js/bootstrap-scrollspy'
-    'bootstrap-tab':    '../components/bootstrap/js/bootstrap-tab'
-    'bootstrap-tooltip':  '../components/bootstrap/js/bootstrap-tooltip'
-    'bootstrap-transition': '../components/bootstrap/js/bootstrap-transition'
-    'bootstrap-typeahead':  '../components/bootstrap/js/bootstrap-typeahead'
-    ###
-
     'config':     'app/config/config_base'
     'router':     'app/routers/index'
     'enums':     'app/enums/enums'
@@ -69,10 +33,11 @@ requirejs.config
 
 require ['app/vendors'], ->
 
-  require ['app/app', 'backbone', 'jquery', 'router', 'controller', 'app/collections/ContactList'], (app, $, Backbone, Router, Controller, ContactList) ->
+  require ['app/app', 'backbone', 'jquery', 'router', 'controller', 'app/collections/ContactList'], (app, Backbone, $, Router, Controller, ContactList) ->
 
     app.addInitializer () ->
-      app.router = new Router {controller: Controller}
+      app.routerController = new Controller()
+      app.router = new Router {controller: app.routerController}
       app.vent.trigger "routing:started"
     app.start()
 

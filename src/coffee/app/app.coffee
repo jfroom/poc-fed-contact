@@ -4,7 +4,7 @@ define [
   #'app/router'
   'config'
   'app/collections/ContactList'
-  'app/views/appView'
+  'app/views/AppView'
   'app/views/CardView'
   'app/views/ContactListView'
 
@@ -17,18 +17,20 @@ define [
     collection: app.contactList
     app: app
 
-  appView = new AppView viewOptions
-  contactListView = new ContactListView viewOptions
-  cardView = new CardView viewOptions
 
   app.addRegions
     main: "section[role='main']"
     contacts: "nav[role=contacts]"
     card: "section[role=card]"
 
+
+  appView = new AppView viewOptions
+  contactListView = new ContactListView viewOptions
+  cardView = new CardView viewOptions
+
   app.vent.on "routing:started", () ->
     console.log "routing start"
-    appView.render()
+    app.main.show appView
     app.card.show cardView
     app.contacts.show contactListView
     Backbone.history.start()

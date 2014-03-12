@@ -61,8 +61,8 @@ define [
       @app.vent.on Enums.Event.ContactAdd, @onRouteAdd, @
       @app.vent.on Enums.Event.ContactView, @onRouteView, @
 
-      @toggleState Enums.State.CardAdd
-    toggleState: (state) ->
+      @toggleState Enums.State.CardAdd, false
+    toggleState: (state, doScroll = true) ->
       if @model != undefined
         @model.set "active", false
 
@@ -80,19 +80,13 @@ define [
         when Enums.State.CardView
           @ui.form.addClass "card__state--view"
 
-      $("html, body").animate({ scrollTop: @ui.form.offset().top - 20}, 300)
+      if doScroll
+        $("html, body").animate({ scrollTop: @ui.form.offset().top - 20}, 300)
 
     events:
       "click #cfm__btn--random": "onRandomClick"
       #"click #cfm__btn--save": "onSaveClick"
       "submit #cfm": "onSubmit"
-    onInputKeypress: (event) ->
-      ENTER_KEY = 13
-      todoText = @ui.input.val().trim()
-      if event.which is ENTER_KEY and todoText
-        @collection.create title: todoText
-        @ui.input.val ""
-      return
 
     buildUI: () ->
       ui_ref = @ui
