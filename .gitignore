@@ -42,6 +42,7 @@ Thumbs.db
 Gemfile.lock
 /.sass-cache
 /.tmp
+/.tmp-dist
 /dist
 /selenium
 /node_modules
