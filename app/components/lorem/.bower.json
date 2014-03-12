@@ -1,0 +1,18 @@
+{
+  "name": "lorem",
+  "main": "src/library/lorem.js",
+  "dependencies": {
+    "jquery": "~1.7.2"
+  },
+  "homepage": "https://github.com/shyiko/lorem",
+  "_release": "ff68b35f2f",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "ff68b35f2ffc0a6a1c4032c6a7e5231b0d4ebeaf"
+  },
+  "_source": "git://github.com/shyiko/lorem.git",
+  "_target": "*",
+  "_originalSource": "lorem",
+  "_direct": true
+}

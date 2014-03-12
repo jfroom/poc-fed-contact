@@ -7,7 +7,6 @@ define [
 
   ContactList = Backbone.Collection.extend
     model: Contact
-
     initialize: (options) ->
     getActive: ->
       @filter isActive
@@ -17,5 +16,7 @@ define [
 
     comparator: (contact) ->
       contact.get "name"
+    onSort: () ->
+      console.log "sort running"
 
   return ContactList

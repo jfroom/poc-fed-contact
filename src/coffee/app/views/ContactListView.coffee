@@ -9,20 +9,15 @@ define [
 
     itemView: ContactItemView
     itemViewContainer: '.contact-list'
-    #el: '.contact-list'
-    initialize: (options) ->
-      console.log "ContactListView collection:" + options.collection.length
-    #ui:
-      #input: ".contact-list"
 
-    events:
-      "keypress #new-todo": "onInputKeypress"
-
-    onInputKeypress: (event) ->
-      ENTER_KEY = 13
-      todoText = @ui.input.val().trim()
-      if event.which is ENTER_KEY and todoText
-        @collection.create title: todoText
-        @ui.input.val ""
+    #https://github.com/marionettejs/backbone.marionette/wiki/Adding-support-for-sorted-collections
+    appendHtml: (collectionView, itemView, index) ->
+      childrenContainer = (if collectionView.itemViewContainer then collectionView.$(collectionView.itemViewContainer) else collectionView.$el)
+      children = childrenContainer.children()
+      if children.size() <= index
+        childrenContainer.append itemView.el
+      else
+        children.eq(index).before itemView.el
       return
+
 

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "directory": "app/components",
   "dependencies": {
-    "jquery": "~1.9.1",
+    "jquery": "~2.1.0",
     "requirejs": "*",
     "raphael": "~2.1.1",
     "modernizr": "~2.6.2",
@@ -21,6 +21,8 @@
     "marionette": "~1.6.4",
     "font-awesome": "~4.0.3",
     "solarized": "~0.1.2",
-    "backbone": "~1.1.2"
+    "backbone": "~1.1.2",
+    "lorem": "*",
+    "chance": "~0.5.4"
   }
 }

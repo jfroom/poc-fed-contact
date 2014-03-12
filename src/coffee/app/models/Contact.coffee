@@ -4,6 +4,7 @@ define [
   Backbone.Model.extend
     defaults:
       active: false
+      guid: ''
       name: ''
       sex: ''
       email: ''
@@ -11,8 +12,7 @@ define [
       birthday: ''
       phone: ''
       address:
-        'street': ''
-        'city': ''
-        'postcode': ''
-        'state': ''
-###
+        street: ''
+        city: ''
+        postcode: ''
+        state: ''

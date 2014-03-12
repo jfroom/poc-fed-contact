@@ -35,12 +35,13 @@ requirejs.config
     'underscore':   '../components/underscore/underscore'
     'backbone':   '../components/backbone/backbone'
     'marionette':   '../components/marionette/lib/backbone.marionette'
-    'localStorage':   '../components/backbone.localStorage/backbone.localStorage'
-    'jquery':     '../components/jquery/jquery'
+    'jquery':     '../components/jquery/dist/jquery'
     'text' :    '../components/requirejs-text/text'
     'domReady':   '../components/requirejs-domready/domReady'
     'modernizr':  '../components/modernizr/modernizr'
     'templates':  '../templates'
+    'lorem':  '../components/lorem/src/library/lorem'
+    'Chance':  '../components/chance/chance'
 
 
 
@@ -62,6 +63,7 @@ requirejs.config
 
     'config':     'app/config/config_base'
     'router':     'app/routers/index'
+    'enums':     'app/enums/enums'
     'controller': 'app/controllers/index'
 
 
@@ -69,10 +71,8 @@ require ['app/vendors'], ->
 
   require ['app/app', 'backbone', 'jquery', 'router', 'controller', 'app/collections/ContactList'], (app, $, Backbone, Router, Controller, ContactList) ->
 
-
     app.addInitializer () ->
       app.router = new Router {controller: Controller}
-
       app.vent.trigger "routing:started"
     app.start()
 

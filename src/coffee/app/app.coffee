@@ -11,13 +11,14 @@ define [
 ], (Marionette, Backbone, Config, ContactList, AppView, CardView, ContactListView)->
 
   app = new Marionette.Application()
-  app.contactList = new ContactList(Config.contactData)
-  console.log "app.ContactList.length:" + app.contactList.length
+  app.contactList = new ContactList Config.contactData
+
   viewOptions =
     collection: app.contactList
+    app: app
 
-  appView = new AppView(viewOptions)
-  contactListView = new ContactListView(viewOptions)
+  appView = new AppView viewOptions
+  contactListView = new ContactListView viewOptions
   cardView = new CardView viewOptions
 
   app.addRegions

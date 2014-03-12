@@ -2,61 +2,27 @@ define [
   "marionette"
   'text!templates/contactItem.html'
 ], (Marionette, tmpl) ->
-  ENTER_KEY = 13
-  ESCAPE_KEY = 27
   Marionette.ItemView.extend
 
     tagName: "li"
     template: _.template( tmpl, @model )
     value: ""
-    ui:
-      edit: ".edit"
 
     events:
       "click .toggle": "toggle"
-      "click .destroy": "destroy"
-      "dblclick label": "onEditDblclick"
-      "keypress .edit": "onEditKeypress"
-      "blur .edit": "onEditBlur"
 
     initialize: ->
       console.log "ContactItemView item"
       @value = @model.get("title")
-      @listenTo @model, "change", @render, this
+      @listenTo @model, "change", @modelChanged, @
       return
-
+    modelChanged: ->
+      #console.log "contactitem model changed" + @model.get("name") + " active? " + @model.get('active')
+      @render()
     onRender: ->
-      @$el.removeClass("active completed").addClass (if @model.get("completed") then "completed" else "active")
-      return
+      #console.log "onreder"
+      @$el.find(".contact-item").removeClass("active").addClass (if @model.get("active") then "active")
+      #debugger
+      @$el.find("a").attr("href", "#/view/" + @model.get("guid"))
 
-    destroy: ->
-      @model.destroy()
-      return
-
-    toggle: ->
-      @model.toggle().save()
-      return
-
-    toggleEditingMode: ->
-      @$el.toggleClass "editing"
-      return
-
-    onEditDblclick: ->
-      @toggleEditingMode()
-      @ui.edit.focus().val @value
-      return
-
-    onEditKeypress: (event) ->
-      @ui.edit.trigger "blur"  if event.which is ENTER_KEY
-      @toggleEditingMode()  if event.which is ESCAPE_KEY
-      return
-
-    onEditBlur: (event) ->
-      @value = event.target.value.trim()
-      if @value
-        @model.set("title", @value).save()
-      else
-        @destroy()
-      @toggleEditingMode()
-      return
 

@@ -1,8 +1,10 @@
 section[role="card"]
+
   @include make-sm-column(9)
   padding: 0
 
   form[role="form"]
+
     @include make-row()
     margin: 0
     padding: 0
@@ -28,6 +30,7 @@ section[role="card"]
 
     .card__pic
       @include make-sm-column(3)
+      text-align: center
       //padding-left: 0
       @extend .form-group
       .card__pic--img-wrap, .card__pic--fpo
@@ -61,7 +64,7 @@ section[role="card"]
       @extend .form-control
       display: inline-block
       width: auto
-    .card__in--city, .card__in--zip
+    .card__in--city, .card__in--postcode
       display: inline-block
       width: auto
 
@@ -70,7 +73,7 @@ section[role="card"]
       //padding: 0
 
     .card__sab
-      display:block
+      display: block
       //float:left
       margin-bottom: $grid-gutter-width/2
       .card__sex, .card__dob, .card__age
@@ -93,9 +96,9 @@ section[role="card"]
     .card__delete
       @extend .btn-danger
 
-  .card__group--btn
-    @include make-sm-column(12)
-    padding: 0
-    margin-top: $grid-gutter-width/2
-    text-align: right
+    .card__group--btn
+      @include make-sm-column(12)
+      padding: 0
+      margin-top: $grid-gutter-width/2
+      text-align: right
 

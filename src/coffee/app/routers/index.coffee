@@ -1,4 +1,6 @@
 define ["marionette"], (Marionette) ->
-  console.log "creating routes"
-  Marionette.AppRouter.extend appRoutes:
-    "*filter": "setFilter"
+
+  Marionette.AppRouter.extend
+    appRoutes:
+      "add": "doAdd"
+      "view/:id": "doView"

@@ -37,8 +37,9 @@ nav[role="contacts"]
     @include disableUserSelect()
     cursor: pointer
     &:hover
-      background-color: darken($gray-lighter, 15%)
-
+      background-color: darken($gray-lighter, 20%)
+    &.active
+      background-color: lighten( $brand-info, 15%)
     .contact-item__thumb
       width: 34px
       height: 34px
@@ -58,4 +59,4 @@ nav[role="contacts"]
     .contact-item__name
       position: relative
       margin: 3px 3px 3px 30px + $grid-gutter-width/2
-      span
+
