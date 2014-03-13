@@ -229,7 +229,7 @@ module.exports = (grunt)->
           mocha:
             ignoreLeaks: true
 
-          urls: ['http://localhost:<%= connect.test.options.port %>/']
+          urls: ['http://localhost:<%= connect.test.options.port %>/index.html']
           run: false
           reporter: 'mocha-phantom-coverage-reporter'
           timeout: 60000
