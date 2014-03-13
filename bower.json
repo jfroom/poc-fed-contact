@@ -22,7 +22,9 @@
     "font-awesome": "~4.0.3",
     "solarized": "~0.1.2",
     "backbone": "~1.1.2",
-    "lorem": "*",
-    "chance": "~0.5.4"
+    "chance": "~0.5.4",
+    "backbone.babysitter": "~0.1.1",
+    "backbone.wreqr": "~1.0.1",
+    "backbone.eventbinder": "~1.0.2"
   }
 }
