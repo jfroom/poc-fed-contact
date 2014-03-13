@@ -6,7 +6,7 @@ before_install:
   - "sh -e /etc/init.d/xvfb start"
   - "npm install -g grunt-cli"
   - "gem install compass"
-  - "npm install"
+  # - "npm install"
   - "sleep 5"
 before_script:
   - "phantomjs --version"
