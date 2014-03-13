@@ -6,6 +6,7 @@ before_script:
   - "sh -e /etc/init.d/xvfb start"
   # - "npm -g update"
   #- "npm install phantomjs -g"
+  - "npm config set registry https://registry.nodejitsu.com"
   - "npm install -g grunt-cli"
   - "gem install compass"
   - "phantomjs -v"
