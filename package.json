@@ -40,7 +40,7 @@
   },
   "scripts": {
     "start": "grunt server",
-    "test": "grunt test"
+    "test": "grunt test -v --debug"
   },
   "devDependencies": {
     "load-grunt-tasks": "^0.4.0",
