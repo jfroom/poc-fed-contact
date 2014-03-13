@@ -8,4 +8,6 @@ before_install:
   - "gem install compass"
   - "npm install"
   - "sleep 5"
+before_script:
+  - "phantomjs --version"
 install: true
