@@ -1,5 +1,4 @@
 define [
-  'marionette'
   'backbone'
   #'app/router'
   'config'
@@ -7,10 +6,11 @@ define [
   'app/views/AppView'
   'app/views/CardView'
   'app/views/ContactListView'
+  'marionette'
 
-], (Marionette, Backbone, Config, ContactList, AppView, CardView, ContactListView)->
+], (Backbone, Config, ContactList, AppView, CardView, ContactListView)->
 
-  app = new Marionette.Application()
+  app = new Backbone.Marionette.Application()
   app.contactList = new ContactList Config.contactData
 
   viewOptions =

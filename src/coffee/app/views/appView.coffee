@@ -1,9 +1,9 @@
 define [
-  'marionette'
   'backbone'
   'underscore'
-  'text!templates/app.html'
-], (Marionette, Backbone, _, tmpl)->
+  'text!templates/app.html',
+  'marionette'
+], (Backbone, _, tmpl)->
 
-  Marionette.ItemView.extend
+  Backbone.Marionette.ItemView.extend
     template: tmpl

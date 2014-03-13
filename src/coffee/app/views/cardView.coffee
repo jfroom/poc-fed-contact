@@ -1,18 +1,17 @@
 
 define [
   'app/app'
-  "marionette"
   'text!templates/card.html'
   'config'
-  'lorem'
   'Chance'
   'app/models/Contact'
   'enums'
-], (app, Marionette, tmpl, Config, Lorem, Chance, Contact, Enums) ->
+  'marionette'
+], (app, tmpl, Config, Chance, Contact, Enums) ->
 
   chance: new Chance()
 
-  Marionette.ItemView.extend
+  Backbone.Marionette.ItemView.extend
     template: _.template( tmpl, {  } )
     defaults:
       state: Enums.State.Idle

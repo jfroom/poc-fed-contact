@@ -1,8 +1,8 @@
 define [
-  "marionette"
   'text!templates/contactItem.html'
-], (Marionette, tmpl) ->
-  Marionette.ItemView.extend
+  'marionette'
+], (tmpl) ->
+  Backbone.Marionette.ItemView.extend
 
     tagName: "li"
     template: _.template( tmpl, @model )

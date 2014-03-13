@@ -1,39 +1,41 @@
 requirejs.config
   baseUrl: './js'
-  shim:
-    'underscore':
-      exports: '_'
-    'jquery':
-      exports: '$'
-    'backbone':
-      deps: ['underscore', 'jquery']
-      exports: 'Backbone'
-    'marionette':
-      exports: 'Backbone.Marionette',
-      deps: ['backbone']
-    'modernizr':
-      exports: 'Modernizr'
 
   paths:
-    'underscore':   '../components/underscore/underscore'
-    'backbone':   '../components/backbone/backbone'
-    'marionette':   '../components/marionette/lib/backbone.marionette'
-    'jquery':     '../components/jquery/dist/jquery'
-    'text' :    '../components/requirejs-text/text'
-    'domReady':   '../components/requirejs-domready/domReady'
-    'modernizr':  '../components/modernizr/modernizr'
-    'templates':  '../templates'
-    'lorem':  '../components/lorem/src/library/lorem'
-    'Chance':  '../components/chance/chance'
-    'config':     'app/config/config_base'
-    'router':     'app/routers/index'
-    'enums':     'app/enums/enums'
-    'controller': 'app/controllers/index'
+    backbone:   '../components/backbone/backbone'
+    underscore:   '../components/underscore/underscore'
+    jquery:     '../components/jquery/dist/jquery'
+    marionette:   '../components/marionette/lib/core/amd/backbone.marionette'
+    "backbone.wreqr": "../components/backbone.wreqr/lib/amd/backbone.wreqr"
+    "backbone.eventbinder": "../components/backbone.wreqr/lib/amd/backbone.eventbinder"
+    "backbone.babysitter": "../components/backbone.babysitter/lib/amd/backbone.babysitter"
+    text:    '../components/requirejs-text/text'
+    domReady:   '../components/requirejs-domready/domReady'
+    modernizr:  '../components/modernizr/modernizr'
+    templates:  '../templates'
+    Chance:  '../components/chance/chance'
+    config:     'app/config/config_base'
+    router:     'app/routers/baseRouter'
+    enums:     'app/enums/enums'
+    controller: 'app/controllers/baseController'
 
+  shim:
+    jquery:
+      exports: '$'
+    underscore:
+      exports: '_'
+    backbone:
+      deps: ['jquery', 'underscore']
+      exports: 'Backbone'
+    marionette:
+      deps : ['jquery', 'underscore', 'backbone']
+      exports : 'Marionette'
+    modernizr:
+      exports: 'Modernizr'
 
 require ['app/vendors'], ->
 
-  require ['app/app', 'backbone', 'jquery', 'router', 'controller', 'app/collections/ContactList'], (app, Backbone, $, Router, Controller, ContactList) ->
+  require ['app/app', 'backbone', 'jquery', 'router', 'controller'], (app, Backbone, $, Router, Controller) ->
 
     app.addInitializer () ->
       app.routerController = new Controller()

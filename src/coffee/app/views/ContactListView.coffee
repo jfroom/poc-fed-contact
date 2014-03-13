@@ -1,10 +1,11 @@
 define [
-  "marionette"
+
   'text!templates/contactList.html'
   'app/views/ContactItemView'
-], (Marionette, tmpl, ContactItemView) ->
+  'marionette'
+], (tmpl, ContactItemView) ->
 
-  Marionette.CompositeView.extend
+  Backbone.Marionette.CompositeView.extend
     template: tmpl
 
     itemView: ContactItemView
