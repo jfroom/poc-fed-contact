@@ -324,7 +324,7 @@ module.exports = (grunt)->
     wait:
         default:
           options:
-            delay: 5000
+            delay: 3000
 
 
   grunt.registerTask('test', [
@@ -333,7 +333,7 @@ module.exports = (grunt)->
     'compass:server'
     #'less:server'
     'connect:test'
-    # 'wait'
+    'wait'
     'mocha'
   ])
 
