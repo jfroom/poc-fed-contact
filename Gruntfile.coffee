@@ -328,7 +328,7 @@ module.exports = (grunt)->
             delay: 3000
     shell:
       list_tmp:
-        command: 'ls -lR .tmp'
+        command: 'ls -lR .tmp && ls -lR src'
 
 
   grunt.registerTask('test', [
