@@ -62,6 +62,7 @@ module.exports = (grunt)->
   grunt.loadNpmTasks('grunt-usemin')
   grunt.loadNpmTasks('grunt-mocha')
   grunt.loadNpmTasks('grunt-coffeecov')
+  grunt.loadNpmTasks('grunt-wait')
 
   # configurable paths
   yeomanConfig = {
@@ -320,6 +321,11 @@ module.exports = (grunt)->
             { name: 'app/app', exclude: ['app/vendors'] }
             { name: 'main', exclude: ['config', 'app/app', 'app/vendors'] }
           ]
+    wait:
+        default:
+          options:
+            delay: 5000
+
 
   grunt.registerTask('test', [
     'coffee:dist'
@@ -327,6 +333,7 @@ module.exports = (grunt)->
     'compass:server'
     #'less:server'
     'connect:test'
+    # 'wait'
     'mocha'
   ])
 

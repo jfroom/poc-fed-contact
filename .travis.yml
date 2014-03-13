@@ -8,6 +8,8 @@ before_script:
   #- "npm install phantomjs -g"
   - "npm config set registry https://registry.nodejitsu.com"
   - "npm install -g grunt-cli"
+  - "npm uninstall grunt-mocha"
+  - "npm install grunt-mocha"
   - "gem install compass"
   - "phantomjs -v"
   #- "npm uninstall -D grunt-mocha"
