@@ -8,7 +8,7 @@ define [
   'enums'
   'marionette'
 ], (app, tmpl, Config, Chance, Contact, Enums) ->
-
+  console.log "CardView file loaded..."
   chance: new Chance()
 
   Backbone.Marionette.ItemView.extend

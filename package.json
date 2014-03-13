@@ -46,6 +46,7 @@
     "load-grunt-tasks": "^0.4.0",
     "grunt-load-options": "^0.1.4",
     "grunt-sass": "^0.11.0",
-    "grunt-wait": "^0.1.0"
+    "grunt-wait": "^0.1.0",
+    "grunt-shell": "^0.6.4"
   }
 }

@@ -59,6 +59,7 @@ module.exports = (grunt)->
   grunt.loadNpmTasks('grunt-contrib-requirejs')
   grunt.loadNpmTasks('grunt-contrib-watch')
   grunt.loadNpmTasks('grunt-open')
+  grunt.loadNpmTasks('grunt-shell')
   grunt.loadNpmTasks('grunt-usemin')
   grunt.loadNpmTasks('grunt-mocha')
   grunt.loadNpmTasks('grunt-coffeecov')
@@ -325,6 +326,9 @@ module.exports = (grunt)->
         default:
           options:
             delay: 3000
+    shell:
+      list_tmp:
+        command: 'ls -lR .tmp'
 
 
   grunt.registerTask('test', [
@@ -333,7 +337,7 @@ module.exports = (grunt)->
     'compass:server'
     #'less:server'
     'connect:test'
-    'wait'
+    'shell:list_tmp'
     'mocha'
   ])
 
