@@ -45,4 +45,4 @@ Gemfile.lock
 /.tmp-dist
 /dist
 /selenium
-/node_modules
+# /node_modules
