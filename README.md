@@ -3,6 +3,9 @@
 ##Overview
 This repository contains a proof-of-concept front-end project for a simple contact manager.
 
+### Video Walkthrough
+<a href="]http://www.youtube.com/watch?v=xme0Spegh2o"><img src="http://img.youtube.com/vi/xme0Spegh2o/hqdefault.jpg" width="480" height="360"/></a>
+
 ###Technologies applied
 - [GruntJS][^grunt]
 - [Yeoman][^yeoman]
@@ -34,6 +37,9 @@ This repository contains a proof-of-concept front-end project for a simple conta
 [^marionette]: http://marionettejs.com/
 [^mocha]: http://visionmedia.github.io/mocha/
 [^footguard]: https://github.com/mazerte/generator-footguard
+
+## Video Walkthrough
+<iframe width="420" height="315" src="//www.youtube.com/embed/xme0Spegh2o?rel=0" frameborder="0" allowfullscreen></iframe>
 
 ## Getting Started
 
