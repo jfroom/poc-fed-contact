@@ -1,4 +1,4 @@
-# poc-fed-contact [![Build Status](https://travis-ci.org/jfroom/poc-fed-contact.png)](https://travis-ci.org/jfroom/poc-fed-contact) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+# poc-fed-contact [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 ##Overview
 This repository contains a proof-of-concept front-end project for a simple contact manager.
@@ -16,8 +16,6 @@ This repository contains a proof-of-concept front-end project for a simple conta
 - [SASS][^sass]
 - [Coffeescript][^coffeescript]
 - [Bower][^bower]
-- [Travis][^travis]
-- [Mocha][^mocha]
 
 [^yeoman]: http://yeoman.io/
 [^grunt]: http://gruntjs.com/
