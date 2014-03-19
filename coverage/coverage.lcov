@@ -115,7 +115,7 @@ DA:3,null
 DA:4,null
 DA:5,null
 DA:6,null
-DA:7,null
+DA:7,1
 DA:8,1
 end_of_record
 SF:views/CardView.coffee
@@ -129,7 +129,7 @@ DA:7,null
 DA:8,null
 DA:9,null
 DA:10,null
-DA:11,null
+DA:11,1
 DA:12,1
 DA:13,null
 DA:14,1
