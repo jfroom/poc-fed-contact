@@ -7,7 +7,7 @@ before_script:
   # - "npm -g update"
   #- "npm install phantomjs -g"
   - "npm config set registry https://registry.nodejitsu.com"
-  - "npm install -g grunt-cli"
+  - "npm install -g bower grunt-cli"
   #- "npm uninstall grunt-mocha"
   #- "npm install grunt-mocha"
   - "npm install"
