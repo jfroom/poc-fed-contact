@@ -1,4 +1,5 @@
-# poc-fed-contact [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+# poc-fed-contact [![Build Status](https://travis-ci.org/jfroom/poc-fed-contact.png)](https://travis-ci.org/jfroom/poc-fed-contact) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+
 
 ##Overview
 This repository contains a proof-of-concept front-end project for a simple contact manager.
@@ -36,8 +37,6 @@ This repository contains a proof-of-concept front-end project for a simple conta
 [^mocha]: http://visionmedia.github.io/mocha/
 [^footguard]: https://github.com/mazerte/generator-footguard
 
-## Video Walkthrough
-<iframe width="420" height="315" src="//www.youtube.com/embed/xme0Spegh2o?rel=0" frameborder="0" allowfullscreen></iframe>
 
 ## Getting Started
 
@@ -47,13 +46,23 @@ _If you haven't used [Node][^node] or [NPM][^npm] before, be sure to check out t
 
 _If you haven't used [grunt][^grunt] before, be sure to check out the [Getting Started][^gruntstart] guide._
 
+_If you haven't used [bower][^bower] before, be sure to [install][^bowerstart] it._
+
 [^node]: http://nodejs.org
 [^npm]: https://npmjs.org/
 [^gruntstart]: http://gruntjs.com/
+[^bower]: http://bower.io
+[^bowerstart]: http://bower.io/#installing-bower
 
 ###Dependencies
 
-Run `npm install` to install all node based dependencies.
+To install all node and bower based dependencies run:
+```
+npm install
+bower install
+```
+
+You'll also need Ruby 2.0.0 or greater installed on your system.
 
 ##License
 Copyright (c) 2014 JFMK, LLC. Released under [MIT License][^license].
