@@ -26,5 +26,8 @@
     "backbone.babysitter": "~0.1.1",
     "backbone.wreqr": "~1.0.1",
     "backbone.eventbinder": "~1.0.2"
+  },
+  "resolutions": {
+    "jquery": "1.8.0 - 1.11.0"
   }
 }
