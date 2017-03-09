@@ -1,3 +1,6 @@
+#Caution
+No longer maintained. Build breaking now years later due to dep updates. No sure why, don't care!
+
 # poc-fed-contact [![Build Status](https://travis-ci.org/jfroom/poc-fed-contact.png)](https://travis-ci.org/jfroom/poc-fed-contact) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 
