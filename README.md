@@ -4,9 +4,6 @@
 ##Overview
 This repository contains a proof-of-concept front-end project for a simple contact manager.
 
-### Video Walkthrough
-<a href="http://www.youtube.com/watch?v=xme0Spegh2o"><img src="http://img.youtube.com/vi/xme0Spegh2o/hqdefault.jpg" width="480" height="360"/></a>
-
 ###Technologies applied
 - [GruntJS][^grunt]
 - [Yeoman][^yeoman]
