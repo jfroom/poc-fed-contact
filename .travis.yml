@@ -1,21 +1,12 @@
 language: node_js
 node_js:
-  - "0.10"
+  - "6"
 before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
-  # - "npm -g update"
-  #- "npm install phantomjs -g"
   - "npm config set registry https://registry.nodejitsu.com"
   - "npm install -g bower grunt-cli"
-  #- "npm uninstall grunt-mocha"
-  #- "npm install grunt-mocha"
   - "npm install"
   - "bower install"
   - "gem install compass"
-  #- "phantomjs -v"
-  #- "npm uninstall -D grunt-mocha"
-  #- "npm install -D grunt-mocha"
-  # - "npm install"
-  #- "sleep 5"
 install: true
