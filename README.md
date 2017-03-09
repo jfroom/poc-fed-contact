@@ -34,7 +34,6 @@ This repository contains a proof-of-concept front-end project for a simple conta
 [^plato]: https://github.com/es-analysis/plato
 [^backbone]: http://backbonejs.org/
 [^marionette]: http://marionettejs.com/
-[^mocha]: http://visionmedia.github.io/mocha/
 [^footguard]: https://github.com/mazerte/generator-footguard
 
 
